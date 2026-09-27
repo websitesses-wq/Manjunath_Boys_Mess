@@ -77,7 +77,7 @@ git clone https://github.com/websitesses-wq/Rajeshwari_Boys_Mess.git
 cd Rajeshwari_Boys_Mess
 
 # Start the dev server
-node server.js
+node local-server.js
 ```
 
 Open your browser at **[http://localhost:3000](http://localhost:3000)**.

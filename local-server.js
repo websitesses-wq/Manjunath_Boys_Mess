@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
   '.css': 'text/css; charset=UTF-8',
@@ -15,7 +15,7 @@ const MIME_TYPES = {
   '.svg': 'image/svg+xml'
 };
 
-const server = http.createServer((req, res) => {
+function requestHandler(req, res) {
   let reqPath = req.url.split('?')[0];
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';
@@ -40,8 +40,14 @@ const server = http.createServer((req, res) => {
 
     fs.createReadStream(filePath).pipe(res);
   });
-});
+}
 
-server.listen(PORT, () => {
-  console.log(`Boys Mess dev server running at http://localhost:${PORT}`);
-});
+const server = http.createServer(requestHandler);
+
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Rajeshwari Boys Mess dev server running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = requestHandler;
