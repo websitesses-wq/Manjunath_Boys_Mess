@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajeshwari Boys Mess Davanagere | Fresh Home Meals & Student Offer</title>
+  <meta name="description" content="Rajeshwari Boys Mess in SS Layout near BIET, Davanagere. Daily morning tea with breakfast, guaranteed night chapati fix, wholesome lunch. Veg and non-veg available (Chicken & Egg). Special College Student Offer (₹3,500/mo & ₹3,000/mo). Phone: +91 96115 57696.">
+  <meta name="keywords" content="Rajeshwari Boys Mess, Davanagere mess, SS Layout mess, BIET students, GMIT students, chapati dinner, student offer mess, chicken egg mess">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Rajeshwari Boys Mess Davanagere | Fresh Home Meals & Student Offer">
+  <meta property="og:description" content="Authentic boys mess in SS Layout, Davanagere. Daily morning tea, guaranteed night chapati fix, honest veg & chicken/egg non-veg. Phone / WhatsApp: +91 96115 57696.">
+  <meta property="og:image" content="assets/rajeshwari_logo.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/jpeg" href="assets/rajeshwari_logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LIVE MESS SERVING STATUS TICKER -->
+  <aside class="live-status-bar" id="liveStatusBar" aria-label="Current Mess Status">
+    <div class="container live-status-inner">
+      <div class="status-indicator-box">
+        <span class="status-dot-pulse" id="statusPulseDot"></span>
+        <span id="liveStatusText">Checking live meal schedule...</span>
+      </div>
+      <div class="status-timing-text" id="liveTimingText">
+        Breakfast: 7:30 - 9:30 AM | Lunch: 12:30 - 2:30 PM | Dinner: 7:45 - 10:00 PM
+      </div>
+    </div>
+  </aside>
+
+  <!-- TOP STICKY NAVIGATION HEADER -->
+  <header class="global-header" id="mainHeader">
+    <div class="header-inner container">
+      
+      <!-- Brand Identity with Unique Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Rajeshwari Boys Mess Home">
+        <img src="assets/rajeshwari_logo.jpg" alt="Rajeshwari Boys Mess Logo" class="logo-img" />
+        <div class="brand-text-col">
+          <span class="brand-name">RAJESHWARI</span>
+          <span class="brand-sub">BOYS MESS // SS LAYOUT</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#menu" class="nav-item">Meal Menu</a>
+        <a href="#pricing" class="nav-item">Student Offers</a>
+        <a href="#verification" class="nav-item">Student ID Verification</a>
+        <a href="#savings" class="nav-item">Savings</a>
+        <a href="#contact" class="nav-item">Location & Timings</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="header-cta-wrap">
+        <a href="tel:+919611557696" class="header-phone-link" aria-label="Call Rajeshwari Boys Mess">
+          📞 <span>+91 96115 57696</span>
+        </a>
+        <button type="button" class="btn-primary" id="headerJoinBtn" onclick="openJoinModal()">
+          Join Mess
+        </button>
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Open mobile navigation" onclick="toggleMobileMenu()">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <a href="#menu" class="mobile-nav-link" onclick="closeMobileMenu()">Daily Meal Menu</a>
+    <a href="#pricing" class="mobile-nav-link" onclick="closeMobileMenu()">Student Offers & Pricing</a>
+    <a href="#verification" class="mobile-nav-link" onclick="closeMobileMenu()">Student ID Verification</a>
+    <a href="#savings" class="mobile-nav-link" onclick="closeMobileMenu()">Monthly Savings Calculator</a>
+    <a href="#leave-pause" class="mobile-nav-link" onclick="closeMobileMenu()">Meal Pause / Leave Notice</a>
+    <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Location & Timings</a>
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <a href="tel:+919611557696" class="btn-secondary" style="flex: 1; text-align: center;">📞 Call</a>
+      <a href="https://wa.me/919611557696" target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp" style="flex: 1; text-align: center;">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-sector" id="hero">
+      <div class="container hero-grid">
+        
+        <!-- Left Sector: Core Value Proposition -->
+        <div class="hero-content">
+          <div class="hero-meta-badge">
+            <span class="badge-index">[STUDENT OFFER // 2026]</span>
+            <span class="badge-loc">SS Layout, Davanagere</span>
+          </div>
+
+          <h1 class="hero-title">
+            RAJESHWARI <br />
+            <span class="accent-text">BOYS MESS.</span>
+          </h1>
+
+          <p class="hero-subheading">
+            Honest home-style cooking for college students and working boys. Fresh breakfast with hot morning tea, daily wholesome lunch, and guaranteed night chapati fix.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn-primary" onclick="openJoinModal()">
+              Join Subscription (WhatsApp)
+            </button>
+            <a href="tel:+919611557696" class="btn-secondary">
+              📞 +91 96115 57696
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-perks-row">
+            <div class="perk-pill">
+              <span class="perk-dot"></span>
+              <span>Morning Tea Included</span>
+            </div>
+            <div class="perk-pill">
+              <span class="perk-dot"></span>
+              <span>Night Chapati Fix Guaranteed</span>
+            </div>
+            <div class="perk-pill">
+              <span class="perk-dot"></span>
+              <span>Veg & Non-Veg (Chicken/Egg)</span>
+            </div>
+            <div class="perk-pill">
+              <span class="perk-dot"></span>
+              <span>Student Rate: ₹3,500/mo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sector: Visual Showcase -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-card-display glow-card">
+            <img src="assets/chapathi_uuta.jpg" alt="Authentic South Indian Boys Mess Chapati and Meal" class="hero-clay-img" />
+            <div class="hero-badge-float">
+              <span class="hero-badge-tag">🔥 DAILY NIGHT FIX</span>
+              <span class="hero-badge-val">Fresh Hot Chapatis Guaranteed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORE COMMITMENTS STRIP (4 Pillars) -->
+    <section class="commitments-bar" aria-label="Our Operational Commitments">
+      <div class="container commitments-inner">
+        <div class="commitment-item">
+          <div class="c-num">01</div>
+          <div>
+            <strong>Morning Tea Included</strong>
+            <p>Every breakfast is served with freshly brewed hot tea to start your college day.</p>
+          </div>
+        </div>
+        <div class="commitment-item">
+          <div class="c-num">02</div>
+          <div>
+            <strong>Night Chapati Fix</strong>
+            <p>Fresh, soft handmade wheat chapatis guaranteed every single dinner.</p>
+          </div>
+        </div>
+        <div class="commitment-item">
+          <div class="c-num">03</div>
+          <div>
+            <strong>Veg & Non-Veg Available</strong>
+            <p>Strictly Chicken & Egg only on scheduled days. Separate vessels for pure vegetarian cooking.</p>
+          </div>
+        </div>
+        <div class="commitment-item">
+          <div class="c-num">04</div>
+          <div>
+            <strong>Student Offer: ₹3,500/mo</strong>
+            <p>Subsidized monthly board for all college students presenting a valid Student ID card.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONEST MEAL MENU SECTION (NO FAKE PROMISES) -->
+    <section class="section-container" id="menu">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">[01 // DAILY MEAL SCHEDULE]</div>
+          <h2 class="section-title">Honest Daily Meals</h2>
+          <p class="section-desc max-600">
+            No unrealistic claims or fake promises. We serve clean, nourishing food every single day with fixed morning tea and guaranteed night chapatis.
+          </p>
+        </div>
+
+        <!-- 3 Realistic Meal Cards -->
+        <div class="menu-cards-grid">
+          
+          <!-- Card 1: Breakfast with Morning Tea -->
+          <article class="menu-card glow-card">
+            <div class="card-icon-wrap">
+              <span class="card-icon">☕</span>
+              <span class="card-timing">07:30 AM – 09:30 AM</span>
+            </div>
+            <h3 class="card-title">Breakfast with Morning Tea</h3>
+            <div class="guarantee-badge">
+              <span class="badge-status-dot"></span> Fixed Daily Guarantee: Tea Included
+            </div>
+            <p class="card-body">
+              Every morning breakfast comes with a cup of freshly prepared hot tea. Fresh, hygienic morning tiffin prepared daily to fuel your morning lectures.
+            </p>
+            <ul class="dish-list">
+              <li>Freshly cooked daily morning breakfast</li>
+              <li>Hot cup of authentic freshly brewed tea</li>
+              <li>Clean, quick dining setup for morning college rush</li>
+            </ul>
+            <div class="card-footnote">
+              *Morning tea is unconditionally provided with breakfast every day.
+            </div>
+          </article>
+
+          <!-- Card 2: Nutritious Afternoon Lunch -->
+          <article class="menu-card glow-card">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🍲</span>
+              <span class="card-timing">12:30 PM – 02:30 PM</span>
+            </div>
+            <h3 class="card-title">Nutritious Afternoon Lunch</h3>
+            <div class="guarantee-badge">
+              <span class="badge-status-dot"></span> Unlimited Rice & Sambar Refills
+            </div>
+            <p class="card-body">
+              Balanced, wholesome lunch designed to keep you energized for lab sessions. Both vegetarian meals and scheduled non-veg dishes available.
+            </p>
+            <ul class="dish-list">
+              <li>Pure Veg: Hot Steamed Rice, Sambar, Rasam, and Fresh Vegetable Palya</li>
+              <li>Non-Veg Days: Chicken or Egg Curry (Strictly limited to Chicken & Egg only)</li>
+              <li>Unlimited hot rice and sambar refills during dining hall hours</li>
+            </ul>
+            <div class="card-footnote">
+              *Non-veg is served on scheduled rotation days (not daily). Dedicated cooking vessels for veg.
+            </div>
+          </article>
+
+          <!-- Card 3: Dinner with Guaranteed Chapati Fix -->
+          <article class="menu-card glow-card highlight-border">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🫓</span>
+              <span class="card-timing">07:45 PM – 10:00 PM</span>
+            </div>
+            <h3 class="card-title">Dinner (Night Chapati Fix)</h3>
+            <div class="guarantee-badge fixed-chapati-badge">
+              <span class="badge-status-dot"></span> Every Night Chapati Guaranteed
+            </div>
+            <p class="card-body">
+              Never worry about missing your staple bread. Every single night dinner guarantees fresh, soft, hot handmade Chapatis.
+            </p>
+            <ul class="dish-list">
+              <li>Fresh handmade wheat chapatis served every dinner</li>
+              <li>Tasty accompanying curry / gravy (Veg / Non-Veg on scheduled nights)</li>
+              <li>Hot steamed rice with flavorful Dal / Rasam</li>
+              <li>Late dinner reserve: Plates kept safe for students returning late from library or labs</li>
+            </ul>
+            <div class="card-footnote">
+              *Night chapati is mandatory and guaranteed every night without fail.
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Dietary Transparency Policy Callout -->
+        <div class="dietary-notice-banner glow-card">
+          <div class="notice-icon-box">🍗</div>
+          <div>
+            <h4 class="notice-heading">Our Honest Dietary Policy</h4>
+            <p class="notice-text">
+              <strong>We do not promise daily non-veg.</strong> Non-veg is available only on scheduled days and is strictly restricted to <strong>fresh Chicken and Egg only</strong> (no other meats permitted). Vegetarian gravies and non-vegetarian curries are prepared in separate cooking vessels with dedicated ladles to ensure 100% dietary respect for all boarders.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STUDENT SAVINGS CALCULATOR SECTION -->
+    <section class="section-container" id="savings" style="background: #F8FAFC; border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">[02 // STUDENT BUDGET BENEFIT]</div>
+          <h2 class="section-title">See How Much You Save</h2>
+          <p class="section-desc max-600">
+            Compare daily hotel/canteen spending with Rajeshwari Boys Mess monthly student offer. Save money and eat healthy, hygienic home food every day.
+          </p>
+        </div>
+
+        <div class="savings-calc-box glow-card">
+          <div>
+            <h3 class="calc-title">Monthly Food Expense Comparison</h3>
+            <p class="calc-desc">
+              Eating outside at local hotels or canteens costs around ₹250/day (Breakfast ₹60 + Lunch ₹100 + Dinner ₹90), which quickly adds up to ₹7,500+ every month.
+            </p>
+          </div>
+
+          <div class="calc-compare-grid">
+            <div class="calc-card-item">
+              <div class="calc-label">Outside Hotel / Canteen</div>
+              <div class="calc-amount-bad">₹7,500</div>
+              <div style="font-size: 0.75rem; color: #64748B;">~₹250 per day</div>
+            </div>
+
+            <div class="calc-card-item">
+              <div class="calc-label">Rajeshwari Boys Mess</div>
+              <div class="calc-amount-good">₹3,500</div>
+              <div style="font-size: 0.75rem; color: #16A34A;">Full Board / Month</div>
+            </div>
+
+            <div class="calc-save-pill">
+              🎉 You Save Over ₹4,000 Every Single Month!
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DYNAMIC PRICING ENGINE & STUDENT OFFER (3500 & 3000 Default) -->
+    <section class="section-container pricing-section" id="pricing">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">[03 // SUBSCRIPTION TIERS & STUDENT OFFER]</div>
+          <h2 class="section-title">Monthly Subscription Plans</h2>
+          <p class="section-desc max-600">
+            Special College Student Offer displayed by default below. Every college student gets direct subsidized pricing by presenting their valid Student ID card. Non-students / regular guests can switch below.
+          </p>
+
+          <!-- Interactive Pricing Toggle Switch (Student Offer on left by default) -->
+          <div class="pricing-toggle-container" role="region" aria-label="Pricing Type Selector">
+            <span class="toggle-label active student-badge-label" id="labelStudent" onclick="setPricingMode(true)">
+              🎓 College Student Offer
+              <span class="save-tag">SAVE ₹1,000/MO</span>
+            </span>
+            <button 
+              type="button" 
+              class="pricing-toggle-switch" 
+              id="pricingToggle" 
+              role="switch" 
+              aria-checked="false" 
+              aria-label="Toggle between College Student Offer and Regular Pricing"
+              onclick="togglePricing()"
+            >
+              <span class="toggle-knob"></span>
+            </button>
+            <span class="toggle-label" id="labelRegular" onclick="setPricingMode(false)">
+              🏢 Regular / Non-Student
+            </span>
+          </div>
+        </div>
+
+        <!-- 2-Card Side-by-Side Grid -->
+        <div class="pricing-cards-grid">
+          
+          <!-- Tier 1: Full Board Plan -->
+          <div class="pricing-card glow-card" id="planFullBoard">
+            <div class="plan-header">
+              <span class="plan-tag">MOST POPULAR // 3 MEALS DAILY</span>
+              <h3 class="plan-name">Full Board Plan</h3>
+              <p class="plan-coverage">Breakfast (with Morning Tea) + Lunch + Dinner (with Chapati Fix)</p>
+            </div>
+
+            <div class="price-display">
+              <span class="currency">₹</span>
+              <span class="price-amount" id="priceFullBoard">3,500</span>
+              <span class="period">/ month</span>
+            </div>
+
+            <div class="student-discount-banner" id="discountBannerFull" style="display: flex;">
+              <span class="discount-check">✓</span> Special Student Offer Applied (Regular: ₹4,500)
+            </div>
+
+            <div class="student-id-notice" id="idNoticeFull">
+              🪪 Valid College ID Card required to avail offer
+            </div>
+
+            <ul class="plan-features">
+              <li><span class="check">✓</span> Morning Breakfast with Daily Hot Tea</li>
+              <li><span class="check">✓</span> Afternoon Wholesome Lunch (Unlimited Rice & Sambar)</li>
+              <li><span class="check">✓</span> Daily Night Chapati Fix Guaranteed</li>
+              <li><span class="check">✓</span> Veg & Chicken/Egg Non-Veg options on scheduled days</li>
+              <li><span class="check">✓</span> Special Festival Feasts included at no extra charge</li>
+              <li><span class="check">✓</span> Meal pause credit for vacation / exams (up to 5 days)</li>
+            </ul>
+
+            <button type="button" class="btn-primary plan-select-btn" onclick="openJoinModal('Full Board')">
+              Subscribe to Full Board
+            </button>
+          </div>
+
+          <!-- Tier 2: Half Board Plan -->
+          <div class="pricing-card glow-card" id="planHalfBoard">
+            <div class="plan-header">
+              <span class="plan-tag">COLLEGE TIME SAVER // 2 MEALS</span>
+              <h3 class="plan-name">Half Board Plan</h3>
+              <p class="plan-coverage">Lunch + Dinner only (Breakfast excluded)</p>
+            </div>
+
+            <div class="price-display">
+              <span class="currency">₹</span>
+              <span class="price-amount" id="priceHalfBoard">3,000</span>
+              <span class="period">/ month</span>
+            </div>
+
+            <div class="student-discount-banner" id="discountBannerHalf" style="display: flex;">
+              <span class="discount-check">✓</span> Special Student Offer Applied (Regular: ₹4,000)
+            </div>
+
+            <div class="student-id-notice" id="idNoticeHalf">
+              🪪 Valid College ID Card required to avail offer
+            </div>
+
+            <ul class="plan-features">
+              <li><span class="cross">✕</span> Morning Breakfast not included</li>
+              <li><span class="check">✓</span> Afternoon Wholesome Lunch (Unlimited Rice & Sambar)</li>
+              <li><span class="check">✓</span> Daily Night Chapati Fix Guaranteed</li>
+              <li><span class="check">✓</span> Veg & Chicken/Egg Non-Veg options on scheduled days</li>
+              <li><span class="check">✓</span> Special Festival Feasts included at no extra charge</li>
+              <li><span class="check">✓</span> Late plate reservation facility for library students</li>
+            </ul>
+
+            <button type="button" class="btn-secondary plan-select-btn" onclick="openJoinModal('Half Board')">
+              Subscribe to Half Board
+            </button>
+          </div>
+
+        </div>
+
+        <!-- UNIVERSAL STUDENT ID VERIFICATION GATEWAY -->
+        <div class="student-verification-gateway glow-card" id="verification">
+          <div class="gateway-header">
+            <div class="gateway-tag">[04 // STUDENT ID VERIFICATION]</div>
+            <h3 class="gateway-title">Student ID Verification Gateway</h3>
+            <p class="gateway-desc">
+              To claim the special discounted <strong>₹3,500/mo</strong> (Full Board) or <strong>₹3,000/mo</strong> (Half Board) student offer, 
+              every college student must prove enrollment at their college with a valid <strong>College ID Card</strong> (BIET, GMIT, DRM, BDT, or any recognized institution). Regular non-student rates are ₹4,500 / ₹4,000.
+            </p>
+          </div>
+
+          <div class="verification-box">
+            <div class="upload-dropzone" id="dropzone" onclick="triggerFileInput()">
+              <input type="file" id="studentIdInput" accept="image/*" class="file-input-hidden" onchange="handleIdFileSelect(event)" />
+              <div class="upload-icon-box">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6803" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <h4 class="upload-title">Upload College Student ID Card Photo</h4>
+              <p class="upload-hint">Drag & drop your college ID card photo here or click to browse (PNG, JPG, or PDF)</p>
+              <div class="file-spec-tag">Must clearly show Student Name, College Name / Roll No / USN, and Valid Academic Year</div>
+            </div>
+
+            <!-- Upload Preview and Simulated Verification Status -->
+            <div class="upload-status-card" id="uploadStatusCard" style="display: none;">
+              <div class="status-img-thumb" id="statusThumbWrap">
+                <img id="idCardPreview" src="" alt="Uploaded College ID preview" />
+              </div>
+              <div class="status-details">
+                <div class="status-badge-verified">
+                  <span class="status-pulse"></span> ID Document Uploaded Successfully
+                </div>
+                <div class="status-file-name" id="statusFileName">college_student_id.jpg</div>
+                <p class="status-notice">
+                  Status: <strong>READY FOR SPOT VERIFICATION</strong>. Bring your original college ID card during your first meal for quick verification.
+                </p>
+                <button type="button" class="btn-clear-upload" onclick="resetIdUpload()">Remove & Re-upload</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rules-callout">
+            <strong>Mandatory Policy Notice:</strong> Showing your genuine college ID card at the mess counter is strictly mandatory. Every student must prove their college enrollment. If valid college ID cannot be verified, regular non-student rates (₹4,500 / ₹4,000) will apply.
+          </div>
+        </div>
+
+        <!-- MEAL PAUSE & LEAVE REQUEST MODULE (Essential Mess Feature) -->
+        <div class="leave-request-card glow-card" id="leave-pause">
+          <div>
+            <div class="section-tag">[STUDENT CONVENIENCE]</div>
+            <h3 class="leave-title">Going Home for the Weekend or Exams?</h3>
+            <p class="leave-desc">
+              Boarders can pause their meal subscription when traveling home or during semester vacations with prior notice.
+            </p>
+            <ul class="leave-rules-list">
+              <li>✓ Up to 5 days meal pause credit allowed per month</li>
+              <li>✓ Inform at least 12 hours in advance via WhatsApp</li>
+              <li>✓ Adjusted in your subsequent monthly billing</li>
+            </ul>
+          </div>
+          <div class="leave-actions">
+            <button type="button" class="btn-secondary" onclick="sendLeaveNotice()">
+              📝 Send Meal Pause Notice (WhatsApp)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOCATION & MESS TIMINGS (Trial Meal Removed Completely) -->
+    <section class="section-container" id="contact">
+      <div class="container">
+        <div class="location-card glow-card">
+          <div class="loc-grid">
+            <div class="loc-details">
+              <div class="section-tag">[05 // LOCATION & TIMINGS]</div>
+              <h2 class="loc-title">Mess Location & Daily Timings</h2>
+              <p class="loc-sub">
+                Conveniently situated in SS Layout, Davanagere — easily accessible from BIET Campus, hostels, and surrounding student residences.
+              </p>
+              
+              <div class="contact-info-list">
+                <div class="contact-row">
+                  <span class="c-label">Address:</span>
+                  <span class="c-val">#42, 3rd Main, SS Layout 'A' Block, Opp. BIET Boys Hostel Road, Davanagere - 577004</span>
+                </div>
+                <div class="contact-row">
+                  <span class="c-label">Daily Dining Timings:</span>
+                  <span class="c-val">Breakfast: 7:30 - 9:30 AM | Lunch: 12:30 - 2:30 PM | Dinner: 7:45 - 10:00 PM</span>
+                </div>
+                <div class="contact-row">
+                  <span class="c-label">Mess Contact & WhatsApp:</span>
+                  <a href="tel:+919611557696" class="c-val phone-highlight">
+                    +91 96115 57696
+                  </a>
+                </div>
+              </div>
+
+              <div class="loc-actions">
+                <a href="https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  📍 Open in Google Maps
+                </a>
+                <a href="https://wa.me/919611557696" target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp">
+                  💬 WhatsApp Us (+91 96115 57696)
+                </a>
+              </div>
+            </div>
+
+            <div class="loc-badge-box">
+              <div class="fssai-pill">
+                <span class="fssai-flag">FSSAI REGISTERED MESS</span>
+                <span class="fssai-number">Lic No: 21224010000492</span>
+              </div>
+              <div class="quick-stat-box">
+                <div class="stat-highlight">100%</div>
+                <div class="stat-label">Daily Night Chapati Fix Guaranteed</div>
+              </div>
+              <div class="quick-stat-box">
+                <div class="stat-highlight">RO Purified</div>
+                <div class="stat-label">Clean & Safe Drinking Water Facility</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESS FAQ ACCORDION -->
+    <section class="section-container" id="faqs" style="background: #F8FAFC; border-top: 1px solid var(--color-border-subtle);">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">[06 // COMMON QUESTIONS]</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc max-600">
+            Everything you need to know about joining and eating at Rajeshwari Boys Mess.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(this)">
+              <span>How do I claim the ₹3,500 / ₹3,000 Student Offer?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Every college student from any recognized institution (BIET, GMIT, DRM, BDT, etc.) simply needs to show their valid college ID card at the counter or upload it during online WhatsApp onboarding to lock in the student rate.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(this)">
+              <span>Are chapatis really served every night?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes, 100% guaranteed! We never miss our night chapati fix. Soft, warm handmade wheat chapatis are prepared on iron tawas every single evening along with curry and rice.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(this)">
+              <span>On which days is Non-Veg food served?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Non-veg is served on scheduled weekly days (typically Wednesday and Sunday) and is strictly limited to fresh Chicken and Egg only. We do not promise non-veg daily, and pure veg food is always prepared separately in dedicated vessels.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(this)">
+              <span>What if I have late lab sessions or library hours?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Just inform the mess manager in advance via WhatsApp at +91 96115 57696, and your dinner plate (including fresh chapatis) will be kept reserved safely until 10:30 PM.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(this)">
+              <span>Can I pay via UPI (Google Pay, PhonePe, Paytm)?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes! We accept UPI payments to +91 96115 57696 as well as cash payments at the mess counter on the first week of every month.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="global-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="f-logo-wrap">
+            <img src="assets/rajeshwari_logo.jpg" alt="Rajeshwari Boys Mess Logo" class="f-logo-img" />
+            <span class="f-logo-text">RAJESHWARI BOYS MESS</span>
+          </div>
+          <p class="f-desc">
+            Authentic, student-first home-cooked dining facility in Davanagere. Delivering wholesome meals with guaranteed morning tea and daily night chapatis.
+          </p>
+          <div class="f-phone">📞 Phone / WhatsApp: +91 96115 57696</div>
+          <div style="font-size: 0.8rem; color: var(--color-primary-action);">
+            FSSAI Reg No: 21224010000492
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="#hero">Overview</a>
+          <a href="#menu">Daily Menu</a>
+          <a href="#pricing">Subscription Plans</a>
+          <a href="#verification">Student ID Gateway</a>
+          <a href="#savings">Savings Calculator</a>
+          <a href="#contact">Location & Timings</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Honest Rules</h4>
+          <span>Morning Tea with Breakfast</span>
+          <span>Every Night Chapati Guaranteed</span>
+          <span>Chicken & Egg Only Non-Veg</span>
+          <span>No Daily Non-Veg False Claims</span>
+          <span>College ID Required for Student Rate</span>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Location</h4>
+          <span>#42, 3rd Main, SS Layout 'A' Block</span>
+          <span>Opp. BIET Boys Hostel Road</span>
+          <span>Davanagere - 577004</span>
+          <span>Direct Contact: +91 96115 57696</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Rajeshwari Boys Mess Davanagere. All rights reserved. Registered under FSSAI standards.</p>
+        <p style="font-style: italic; opacity: 0.75;">Every college student must present a valid college ID card to avail discounted ₹3,500/₹3,000 monthly rates. Regular non-student rates: ₹4,500/₹4,000.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BOTTOM QUICK ACTIONS (Phone Friendly) -->
+  <aside class="mobile-bottom-actions" aria-label="Quick Mobile Actions">
+    <a href="tel:+919611557696" class="mobile-bottom-btn btn-secondary">
+      📞 Call Mess
+    </a>
+    <a href="https://wa.me/919611557696" target="_blank" rel="noopener noreferrer" class="mobile-bottom-btn btn-primary btn-whatsapp">
+      💬 WhatsApp
+    </a>
+  </aside>
+
+  <!-- INTERACTIVE SUBSCRIPTION & ONBOARDING MODAL -->
+  <div class="modal-backdrop" id="joinModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display: none;">
+    <div class="modal-window glow-card">
+      <div class="modal-header">
+        <div class="modal-tag">[ONBOARDING GATEWAY]</div>
+        <button type="button" class="modal-close" aria-label="Close modal" onclick="closeJoinModal()">✕</button>
+      </div>
+
+      <h3 class="modal-title" id="modalTitle">Join Rajeshwari Boys Mess</h3>
+      <p class="modal-sub">Confirm your subscription details below to reserve your mess seat via WhatsApp.</p>
+
+      <form id="onboardingForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="studentPhone">WhatsApp Phone Number</label>
+            <input type="tel" id="studentPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalPlanSelect">Selected Meal Plan</label>
+            <select id="modalPlanSelect" onchange="updateModalPriceDisplay()">
+              <option value="Full Board">Full Board (Breakfast + Lunch + Dinner)</option>
+              <option value="Half Board">Half Board (Lunch + Dinner Only)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dietPreference">Dietary Preference</label>
+            <select id="dietPreference">
+              <option value="Both Veg & Non-Veg (Chicken/Egg)">Both Veg & Non-Veg (Chicken/Egg)</option>
+              <option value="Pure Vegetarian">Pure Vegetarian</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="custom-checkbox-label">
+            <input type="checkbox" id="modalStudentCheckbox" onchange="toggleModalStudentCheck()" checked />
+            <span class="custom-box"></span>
+            <span class="checkbox-text">
+              <strong>I am a College Student</strong> (I will present my valid College ID card to claim the Student Offer)
+            </span>
+          </label>
+        </div>
+
+        <!-- Calculated Summary Box -->
+        <div class="modal-price-summary">
+          <div class="summary-line">
+            <span>Monthly Subscription Fee:</span>
+            <span class="summary-amount" id="modalFinalPrice">₹3,500 / month</span>
+          </div>
+          <div class="summary-discount-note" id="modalDiscountNote" style="display: block;">
+            ✓ ₹1,000 College Student Offer applied upon College ID verification (Regular: ₹4,500)
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" onclick="closeJoinModal()">Cancel</button>
+          <button type="submit" class="btn-primary" id="confirmSubscribeBtn">Confirm & Book via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="app.js"></script>
+</body>
+</html>

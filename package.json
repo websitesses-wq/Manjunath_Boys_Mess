@@ -1,0 +1,21 @@
+{
+  "name": "rajeshwari-boys-mess",
+  "version": "1.0.0",
+  "description": "Official Single-Page Web Application for Rajeshwari Boys Mess, Davanagere.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "boys-mess",
+    "davanagere",
+    "student-mess",
+    "south-indian-food",
+    "chapati-dinner",
+    "biet",
+    "gmit"
+  ],
+  "author": "Rajeshwari Boys Mess",
+  "license": "MIT"
+}
