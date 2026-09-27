@@ -10,6 +10,12 @@
  * 7. FAQ Accordion Toggle
  */
 
+if (typeof window === 'undefined' || typeof document === 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {};
+  }
+} else {
+
 // Target WhatsApp and Contact Phone Number
 const MESS_PHONE = '+91 96115 57696';
 const MESS_WHATSAPP_NUMBER = '919611557696';
@@ -28,12 +34,14 @@ const PRICING_DATA = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  initPricingState();
-  initLiveMealStatus();
-  initMouseFlashlightEffect();
-  initDragAndDrop();
-});
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initPricingState();
+    initLiveMealStatus();
+    initMouseFlashlightEffect();
+    initDragAndDrop();
+  });
+}
 
 /* ==========================================================================
    1. LIVE MEAL SERVING STATUS TRACKER
@@ -471,3 +479,21 @@ function toggleFaq(buttonElement) {
     faqItem.classList.add('active');
   }
 }
+
+// Expose handlers to window scope for inline HTML event attributes
+window.openJoinModal = openJoinModal;
+window.closeJoinModal = closeJoinModal;
+window.toggleMobileMenu = toggleMobileMenu;
+window.closeMobileMenu = closeMobileMenu;
+window.setPricingMode = setPricingMode;
+window.togglePricing = togglePricing;
+window.triggerFileInput = triggerFileInput;
+window.handleIdFileSelect = handleIdFileSelect;
+window.resetIdUpload = resetIdUpload;
+window.sendLeaveNotice = sendLeaveNotice;
+window.toggleFaq = toggleFaq;
+window.handleFormSubmit = handleFormSubmit;
+window.updateModalPriceDisplay = updateModalPriceDisplay;
+window.toggleModalStudentCheck = toggleModalStudentCheck;
+
+} // end browser environment block
