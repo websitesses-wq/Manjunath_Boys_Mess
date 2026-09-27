@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FF6803">
   <title>Rajeshwari Boys Mess Davanagere | Fresh Home Meals & Student Offer</title>
   <meta name="description" content="Rajeshwari Boys Mess in SS Layout near BIET, Davanagere. Daily morning tea with breakfast, guaranteed night chapati fix, wholesome lunch. Veg and non-veg available (Chicken & Egg). Special College Student Offer (₹3,500/mo & ₹3,000/mo). Phone: +91 96115 57696.">
   <meta name="keywords" content="Rajeshwari Boys Mess, Davanagere mess, SS Layout mess, BIET students, GMIT students, chapati dinner, student offer mess, chicken egg mess">
@@ -708,40 +711,35 @@
   <div class="modal-backdrop" id="joinModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display: none;">
     <div class="modal-window glow-card">
       <div class="modal-header">
-        <div class="modal-tag">[ONBOARDING GATEWAY]</div>
-        <button type="button" class="modal-close" aria-label="Close modal" onclick="closeJoinModal()">✕</button>
+        <div class="modal-tag">JOIN RAJESHWARI MESS</div>
+        <button type="button" class="modal-close" aria-label="Close modal" onclick="closeJoinModal()">&#x2715;</button>
       </div>
 
-      <h3 class="modal-title" id="modalTitle">Join Rajeshwari Boys Mess</h3>
-      <p class="modal-sub">Confirm your subscription details below to reserve your mess seat via WhatsApp.</p>
+      <h3 class="modal-title" id="modalTitle">Reserve Your Seat</h3>
+      <p class="modal-sub">Fill in your details — we confirm via WhatsApp within minutes.</p>
 
       <form id="onboardingForm" onsubmit="handleFormSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="studentName">Full Name</label>
-            <input type="text" id="studentName" placeholder="e.g. Rahul Sharma" required />
-          </div>
-          <div class="form-group">
-            <label for="studentPhone">WhatsApp Phone Number</label>
-            <input type="tel" id="studentPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required />
-          </div>
+        <div class="form-group">
+          <label for="studentName">Full Name</label>
+          <input type="text" id="studentName" name="name" placeholder="e.g. Rahul Sharma" autocomplete="name" inputmode="text" required />
         </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="modalPlanSelect">Selected Meal Plan</label>
-            <select id="modalPlanSelect" onchange="updateModalPriceDisplay()">
-              <option value="Full Board">Full Board (Breakfast + Lunch + Dinner)</option>
-              <option value="Half Board">Half Board (Lunch + Dinner Only)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="dietPreference">Dietary Preference</label>
-            <select id="dietPreference">
-              <option value="Both Veg & Non-Veg (Chicken/Egg)">Both Veg & Non-Veg (Chicken/Egg)</option>
-              <option value="Pure Vegetarian">Pure Vegetarian</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label for="studentPhone">WhatsApp Number</label>
+          <input type="tel" id="studentPhone" name="tel" placeholder="10-digit mobile number" pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel" required />
+        </div>
+        <div class="form-group">
+          <label for="modalPlanSelect">Meal Plan</label>
+          <select id="modalPlanSelect" name="plan" onchange="updateModalPriceDisplay()">
+            <option value="Full Board">Full Board &mdash; Breakfast + Lunch + Dinner</option>
+            <option value="Half Board">Half Board &mdash; Lunch + Dinner Only</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dietPreference">Dietary Preference</label>
+          <select id="dietPreference" name="diet">
+            <option value="Both Veg &amp; Non-Veg (Chicken/Egg)">Both Veg &amp; Non-Veg (Chicken/Egg)</option>
+            <option value="Pure Vegetarian">Pure Vegetarian</option>
+          </select>
         </div>
 
         <div class="form-group checkbox-group">
@@ -767,7 +765,7 @@
 
         <div class="form-actions">
           <button type="button" class="btn-secondary" onclick="closeJoinModal()">Cancel</button>
-          <button type="submit" class="btn-primary" id="confirmSubscribeBtn">Confirm & Book via WhatsApp</button>
+          <button type="submit" class="btn-primary" id="confirmSubscribeBtn">Book via WhatsApp</button>
         </div>
       </form>
     </div>

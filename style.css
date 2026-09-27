@@ -1829,9 +1829,10 @@ a {
 }
 
 /* ==========================================================================
-   PHONE & TABLET RESPONSIVE QUERIES
+   PHONE & TABLET RESPONSIVE QUERIES — ANDROID FIRST
    ========================================================================== */
 
+/* ── 1024px Tablets ── */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1863,7 +1864,9 @@ a {
   }
 }
 
+/* ── 768px Mobile ── */
 @media (max-width: 768px) {
+  /* Header */
   .nav-links,
   .header-phone-link {
     display: none;
@@ -1873,6 +1876,15 @@ a {
     display: block;
   }
 
+  /* Brand text — shorter on small screens */
+  .brand-name {
+    font-size: 1rem;
+  }
+  .brand-sub {
+    font-size: 0.65rem;
+  }
+
+  /* Hero */
   .hero-title {
     font-size: 2.35rem;
   }
@@ -1881,53 +1893,303 @@ a {
     font-size: 1.05rem;
   }
 
+  /* Pricing */
   .pricing-cards-grid {
     grid-template-columns: 1fr;
   }
 
+  /* Commitments */
   .commitments-inner {
     grid-template-columns: 1fr;
   }
 
+  /* Footer */
   .footer-top {
     grid-template-columns: 1fr;
   }
 
+  /* Form inside modal — stack columns */
   .form-row {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
+  /* Modal actions — stack */
   .form-actions {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
+  /* Location */
   .location-card {
     padding: 24px;
   }
 
+  /* Student gateway */
   .student-verification-gateway {
     padding: 28px 18px;
   }
 }
 
+/* ── 480px Small Android (Galaxy A, Moto G, Redmi etc.) ── */
 @media (max-width: 480px) {
+  /* Root font tuning */
+  html {
+    font-size: 15px;
+  }
+
+  /* Container edge padding */
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Body bottom padding for sticky bar */
+  body {
+    padding-bottom: 74px;
+  }
+
+  /* ─ Header ─ */
+  .global-header {
+    height: 60px;
+  }
+  :root {
+    --header-height: 60px;
+  }
+  .logo-img {
+    width: 36px;
+    height: 36px;
+  }
+  .brand-name {
+    font-size: 0.92rem;
+  }
+  .brand-sub {
+    display: none; /* hide tagline to save space */
+  }
+  /* Show Join Mess button even on small screens */
+  #headerJoinBtn {
+    display: inline-flex;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  /* ─ Hero ─ */
+  .hero-sector {
+    padding-top: 24px;
+    padding-bottom: 36px;
+  }
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-subheading {
+    font-size: 0.95rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+  .hero-perks-row {
+    gap: 6px;
+  }
+  .perk-pill {
+    font-size: 0.76rem;
+    padding: 5px 10px;
   }
 
+  /* ─ Section headings ─ */
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
+  }
+  .section-subtitle {
+    font-size: 0.92rem;
   }
 
+  /* ─ Pricing cards ─ */
   .price-amount {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
+  }
+  .pricing-toggle-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
   }
 
+  /* ─ Savings calculator ─ */
   .calc-compare-grid {
     grid-template-columns: 1fr;
   }
-
   .calc-save-pill {
     grid-column: span 1;
   }
+
+  /* ─ Commitments strip ─ */
+  .commitment-item {
+    padding: 14px;
+  }
+  .commitment-icon {
+    font-size: 1.8rem;
+  }
+
+  /* ─ Menu cards ─ */
+  .menu-card {
+    padding: 20px 16px;
+  }
+
+  /* ─ FAQs ─ */
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 14px 12px;
+    text-align: left;
+  }
+  .faq-answer {
+    font-size: 0.88rem;
+    padding: 0 12px 14px;
+  }
+
+  /* ─ Location card ─ */
+  .location-card {
+    padding: 18px 14px;
+  }
+
+  /* ─ Footer ─ */
+  .footer-top {
+    gap: 20px;
+  }
+  .footer-bottom p {
+    font-size: 0.78rem;
+  }
+
+  /* ─ Mobile sticky bar ─ */
+  .mobile-bottom-actions {
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .mobile-bottom-btn {
+    font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+
+  /* ─ MODAL FIX — key: prevent overflow on small screens ─ */
+  .modal-backdrop {
+    padding: 0;
+    align-items: flex-end; /* slide up from bottom on mobile */
+  }
+
+  .modal-window {
+    max-width: 100%;
+    width: 100%;
+    max-height: 92vh;
+    border-radius: 20px 20px 0 0; /* rounded only at top */
+    padding: 20px 16px 28px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-sub {
+    font-size: 0.82rem;
+    margin-bottom: 14px;
+  }
+
+  /* Stack form rows fully */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  /* Inputs — full width, bigger touch target */
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 1rem; /* prevents iOS zoom */
+    padding: 13px 12px;
+    width: 100%;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+  }
+
+  /* Checkbox row */
+  .custom-checkbox-label {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  /* Price summary box */
+  .modal-price-summary {
+    padding: 12px;
+  }
+  .summary-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .summary-amount {
+    font-size: 1.2rem;
+  }
+  .summary-discount-note {
+    font-size: 0.75rem;
+  }
+
+  /* Action buttons — full width stack */
+  .form-actions {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .form-actions .btn-primary,
+  .form-actions .btn-secondary {
+    width: 100%;
+    padding: 14px;
+    font-size: 0.95rem;
+    justify-content: center;
+  }
 }
+
+/* ── 360px Tiny Androids (Redmi, Samsung Galaxy M-series) ── */
+@media (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+  .hero-title {
+    font-size: 1.65rem;
+  }
+  .section-title {
+    font-size: 1.45rem;
+  }
+  .modal-title {
+    font-size: 1.15rem;
+  }
+  .price-amount {
+    font-size: 2.2rem;
+  }
+  #headerJoinBtn {
+    display: none; /* too cramped — use sticky bar */
+  }
+}
+
+/* Ensure inputs never cause zoom on iOS/Android */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  font-size: 1rem !important;
+}
+
