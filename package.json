@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Official Single-Page Web Application for Rajeshwari Boys Mess, Davanagere.",
   "scripts": {
-    "dev": "node local-server.js",
-    "start": "node local-server.js"
+    "build": "echo 'Static site ready'",
+    "dev": "node scripts/local-server.js",
+    "start": "node scripts/local-server.js"
   },
   "keywords": [
     "boys-mess",

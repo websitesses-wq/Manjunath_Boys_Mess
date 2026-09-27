@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
+const ROOT_DIR = path.join(__dirname, '..');
+
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
   '.css': 'text/css; charset=UTF-8',
@@ -21,7 +23,7 @@ function requestHandler(req, res) {
     reqPath = '/index.html';
   }
 
-  const filePath = path.join(__dirname, reqPath);
+  const filePath = path.join(ROOT_DIR, reqPath);
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
