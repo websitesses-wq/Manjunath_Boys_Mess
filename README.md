@@ -1,7 +1,7 @@
 # 🍲 Rajeshwari Boys Mess — Davanagere
 
 > **Authentic Home-Style Dining for College Students & Working Professionals**  
-> Located in **SS Layout 'A' Block**, Opp. BIET Boys Hostel Road, Davanagere — 577004.  
+> Located **Opposite More Super Market**, Davanagere — 577004 (Just 15 mins from BIET Campus).  
 > 📞 **Contact / WhatsApp:** [+91 96115 57696](tel:+919611557696) | 📍 **Google Maps:** [Find Us](https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7)
 
 ---
@@ -107,7 +107,7 @@ vercel
 
 ## 📍 Location & Contact Details
 
-* **Address:** #42, 3rd Main, SS Layout 'A' Block, Opp. BIET Boys Hostel Road, Davanagere, Karnataka - 577004
+* **Address:** #42, Opposite More Super Market, Davanagere, Karnataka - 577004 (Just 15 mins from BIET Campus)
 * **Phone / Calling:** [+91 96115 57696](tel:+919611557696)
 * **WhatsApp:** [+91 96115 57696](https://wa.me/919611557696)
 * **Google Maps Location:** [https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7](https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7)
