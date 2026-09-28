@@ -2105,13 +2105,32 @@ a {
     display: inline-block !important;
   }
 
-  /* Hidden on Android as requested: Only name in middle and time on right */
+  /* Infinity connector: visible but compact on Android */
   .dev-infinity-connector {
-    display: none !important;
+    display: flex !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 -5px !important;
   }
 
+  .infinity-symbol {
+    font-size: 0.95rem !important;
+  }
+
+  /* Phone pill: visible and compact on Android */
   .dev-pill-right {
-    display: none !important;
+    display: inline-flex !important;
+    padding: 3px 7px 3px 10px !important;
+    gap: 4px !important;
+  }
+
+  .dev-phone-num {
+    font-size: 0.66rem !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  .phone-badge-icon {
+    font-size: 0.66rem !important;
   }
 
   .taskbar-action-btn {
