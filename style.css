@@ -60,12 +60,12 @@ body {
   color: var(--color-typography);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-bottom: 70px; /* Room for mobile sticky bar */
+  padding-bottom: 115px; /* Room for mobile sticky bar + developer taskbar */
 }
 
 @media (min-width: 769px) {
   body {
-    padding-bottom: 0;
+    padding-bottom: 46px; /* Room for desktop developer taskbar */
   }
 }
 
@@ -1604,9 +1604,31 @@ a {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(191, 191, 191, 0.65);
+}
+
+.footer-dev-credit {
+  color: #D6C2A7;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
   gap: 6px;
-  font-size: 0.8rem;
-  color: rgba(191, 191, 191, 0.6);
+  flex-wrap: wrap;
+}
+
+.dev-author-highlight {
+  font-family: var(--font-family-mono);
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFE29A 35%, #F5B041 70%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2px 8px;
+  background-color: rgba(255, 104, 3, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 6px;
 }
 
 /* ==========================================================================
@@ -1616,14 +1638,16 @@ a {
 .mobile-bottom-actions {
   display: none;
   position: fixed;
-  bottom: 0;
+  bottom: 40px; /* Positioned directly above developer taskbar */
   left: 0;
   width: 100%;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid var(--color-border-medium);
-  padding: 10px 16px;
-  z-index: 998;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  padding: 8px 16px;
+  z-index: 1000;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 768px) {
@@ -1644,6 +1668,300 @@ a {
   font-size: 0.9rem;
   font-weight: 800;
   text-align: center;
+}
+
+/* ==========================================================================
+   PERSISTENT DEVELOPER TASKBAR (Site-Wide Bottom Bar)
+   ========================================================================== */
+
+.dev-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(14, 6, 3, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5), 0 -1px 4px rgba(212, 175, 55, 0.15);
+  z-index: 1001; /* Fixed across whole site, above background and below modal */
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-family: var(--font-family-primary);
+}
+
+.dev-taskbar-inner {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Left Group: Brand Status */
+.taskbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #C5B29B;
+  flex: 1;
+  min-width: 0;
+}
+
+.taskbar-brand-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: #F5E8D8;
+  white-space: nowrap;
+}
+
+.taskbar-icon {
+  font-size: 0.9rem;
+}
+
+.taskbar-brand-name {
+  letter-spacing: -0.01em;
+}
+
+.taskbar-sep {
+  color: rgba(212, 175, 55, 0.35);
+  font-weight: 300;
+}
+
+.taskbar-status-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #A3E635;
+  white-space: nowrap;
+}
+
+.taskbar-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #22C55E;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22C55E;
+  animation: pulseTaskbar 2s infinite;
+}
+
+@keyframes pulseTaskbar {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+    box-shadow: 0 0 12px #4ADE80;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+/* Center Group: Prominent Developer Attribution */
+.taskbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dev-credit-pill {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(48, 24, 12, 0.95) 0%, rgba(26, 12, 5, 0.98) 100%);
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  border-radius: 9999px;
+  padding: 4px 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+}
+
+.dev-credit-pill:hover {
+  border-color: rgba(255, 180, 0, 0.85);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.dev-badge-icon {
+  font-size: 0.85rem;
+  color: #FFB800;
+  filter: drop-shadow(0 0 4px rgba(255, 184, 0, 0.65));
+  flex-shrink: 0;
+}
+
+.dev-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #D6C2A7;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dev-name {
+  font-family: var(--font-family-mono);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFE29A 30%, #F5B041 65%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+  white-space: nowrap;
+}
+
+.dev-sparkle {
+  color: #F5B041;
+  font-size: 0.72rem;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: sparkleRotate 4s ease-in-out infinite;
+}
+
+@keyframes sparkleRotate {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.3) rotate(90deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(245, 176, 65, 0.8));
+  }
+}
+
+/* Right Group: Live Clock & Action */
+.taskbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.taskbar-clock-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #F5E8D8;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 3px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.clock-icon {
+  font-size: 0.76rem;
+  opacity: 0.85;
+}
+
+.taskbar-action-btn {
+  background: rgba(255, 104, 3, 0.16);
+  border: 1px solid rgba(255, 104, 3, 0.45);
+  color: #FFA552;
+  font-family: var(--font-family-primary);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.taskbar-action-btn:hover {
+  background: var(--color-primary-action);
+  color: #FFFFFF;
+  border-color: var(--color-primary-action);
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments for mobile and small viewports */
+@media (max-width: 860px) {
+  .taskbar-left {
+    display: none;
+  }
+  .taskbar-center {
+    flex: 1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .dev-taskbar {
+    height: 38px;
+  }
+  .dev-taskbar-inner {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .dev-credit-pill {
+    padding: 3px 9px;
+    gap: 5px;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+  .dev-label {
+    font-size: 0.65rem;
+    white-space: nowrap;
+  }
+  .dev-name {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .taskbar-clock-box {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+    white-space: nowrap;
+  }
+  .taskbar-action-btn {
+    display: none;
+  }
+  .mobile-bottom-actions {
+    bottom: 38px;
+  }
+}
+
+@media (max-width: 380px) {
+  .dev-label {
+    display: none;
+  }
+  .dev-name {
+    font-size: 0.75rem;
+  }
+  .taskbar-clock-box {
+    font-size: 0.65rem;
+    padding: 2px 4px;
+  }
 }
 
 /* ==========================================================================

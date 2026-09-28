@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,7 +29,7 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 
 <body>
@@ -730,6 +730,7 @@
 
       <div class="footer-bottom">
         <p>© 2026 MANJUNATH BOYS MESS Davanagere. All rights reserved. Registered under FSSAI standards.</p>
+        <p class="footer-dev-credit">Crafted &amp; Developed with excellence by <strong class="dev-author-highlight">V SUSSHANTH</strong></p>
         <p style="font-style: italic; opacity: 0.75;">Every college student must present a valid college ID card to
           avail discounted ₹3,500/₹3,000 monthly rates. Regular non-student rates: ₹4,500/₹4,000.</p>
       </div>
@@ -745,6 +746,49 @@
       class="mobile-bottom-btn btn-primary btn-whatsapp">
       💬 WhatsApp
     </a>
+  </aside>
+
+  <!-- ==========================================================================
+       SITE-WIDE DEVELOPER TASKBAR (Pinned at Bottom)
+       ========================================================================== -->
+  <aside class="dev-taskbar" id="devTaskbar" aria-label="Website Developer Taskbar">
+    <div class="dev-taskbar-inner">
+
+      <!-- Left: System Branding & Live Status -->
+      <div class="taskbar-left">
+        <span class="taskbar-brand-chip">
+          <span class="taskbar-icon">🍲</span>
+          <span class="taskbar-brand-name">Manjunath Mess</span>
+        </span>
+        <span class="taskbar-sep">|</span>
+        <div class="taskbar-status-chip" title="Mess is currently serving & system online">
+          <span class="taskbar-pulse-dot"></span>
+          <span class="taskbar-status-text">Online &bull; Davanagere</span>
+        </div>
+      </div>
+
+      <!-- Center: Prominent Developer Attribution -->
+      <div class="taskbar-center">
+        <div class="dev-credit-pill">
+          <span class="dev-badge-icon">⚡</span>
+          <span class="dev-label">Developed by</span>
+          <span class="dev-name">V SUSSHANTH</span>
+          <span class="dev-sparkle">✦</span>
+        </div>
+      </div>
+
+      <!-- Right: Live Clock & Quick Navigation -->
+      <div class="taskbar-right">
+        <div class="taskbar-clock-box" id="taskbarClockWrap" title="Live Davanagere Time (IST)">
+          <span class="clock-icon">🕒</span>
+          <span id="taskbarClock">--:--:--</span>
+        </div>
+        <button type="button" class="taskbar-action-btn" id="taskbarScrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Scroll to Top" aria-label="Scroll to top">
+          ▲ Top
+        </button>
+      </div>
+
+    </div>
   </aside>
 
   <!-- INTERACTIVE SUBSCRIPTION & ONBOARDING MODAL -->

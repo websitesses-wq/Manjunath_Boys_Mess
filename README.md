@@ -1,4 +1,4 @@
-﻿# 🍲 MANJUNATH BOYS MESS — Davanagere
+# 🍲 MANJUNATH BOYS MESS — Davanagere
 
 > **Authentic Home-Style Dining for College Students & Working Professionals**  
 > Located **Opposite More Super Market**, Davanagere — 577004 (Just 15 mins from BIET Campus).  
@@ -115,4 +115,13 @@ vercel
 
 ---
 
-© 2026 **MANJUNATH BOYS MESS**. Built with pride for the students of Davanagere.
+## 👨‍💻 Developer & Credits
+
+* **Designed & Developed by:** **V SUSSHANTH**
+* **Application:** Manjunath Boys Mess (Davanagere)
+* **Features:** Live meal status tracking, student savings calculator, WhatsApp instant seat reservation, responsive desktop & mobile design, dedicated persistent system taskbar.
+
+---
+
+© 2026 **MANJUNATH BOYS MESS**. Built with pride for the students of Davanagere. Developed by **V SUSSHANTH**.
+

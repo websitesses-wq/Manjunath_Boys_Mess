@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Manjunath Boys Mess - Interactive Client Application
  * Features:
  * 1. Live Meal Status Tracker (real-time Open/Closed indicator)
@@ -480,6 +480,34 @@ function toggleFaq(buttonElement) {
   }
 }
 
+/* ==========================================================================
+   9. PERSISTENT DEVELOPER TASKBAR LIVE CLOCK
+   ========================================================================== */
+
+function initTaskbarClock() {
+  const clockEl = document.getElementById('taskbarClock');
+  if (!clockEl) return;
+
+  function updateClock() {
+    const now = new Date();
+    clockEl.textContent = now.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTaskbarClock);
+} else {
+  initTaskbarClock();
+}
+
 // Expose handlers to window scope for inline HTML event attributes
 window.openJoinModal = openJoinModal;
 window.closeJoinModal = closeJoinModal;
@@ -495,5 +523,7 @@ window.toggleFaq = toggleFaq;
 window.handleFormSubmit = handleFormSubmit;
 window.updateModalPriceDisplay = updateModalPriceDisplay;
 window.toggleModalStudentCheck = toggleModalStudentCheck;
+window.initTaskbarClock = initTaskbarClock;
 
 } // end browser environment block
+
