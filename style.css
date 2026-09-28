@@ -2006,97 +2006,174 @@ a {
   transform: translateY(-1px);
 }
 
-/* Responsive adjustments for mobile and small viewports */
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS FOR TASKBAR (Desktop vs Android/Mobile)
+   ========================================================================== */
+
+/* Tablet & Intermediate Views */
 @media (max-width: 900px) {
   .taskbar-left {
-    display: none;
-  }
-  .taskbar-center {
-    flex: 1;
-    justify-content: flex-start;
+    display: none !important;
   }
 }
 
-@media (max-width: 680px) {
+/* Android & Mobile Phones: Only Developer Name in Middle & Live Time on Right */
+@media (max-width: 768px) {
   .dev-taskbar {
-    height: 38px;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
+
   .dev-taskbar-inner {
-    padding: 0 8px;
-    gap: 6px;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* Pushes clock to right */
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
   }
-  .dev-credit-pill {
-    padding: 3px 8px;
-    gap: 4px;
-    white-space: nowrap !important;
+
+  /* 1. Left side branding hidden on Android */
+  .taskbar-left {
+    display: none !important;
+  }
+
+  /* 2. Developer Name: Perfectly in the Middle */
+  .taskbar-center {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2 !important;
+    pointer-events: auto !important;
+  }
+
+  .dev-infinity-wrapper {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  }
+
+  /* Center Capsule: "Developed by V SUSSHANTH" */
+  .dev-pill-left {
     display: inline-flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 3px 8px !important;
+    border-radius: 9999px !important;
+    background: linear-gradient(135deg, rgba(48, 24, 12, 0.96) 0%, rgba(26, 12, 5, 0.98) 100%) !important;
+    border: 1.5px solid rgba(212, 175, 55, 0.6) !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
+
+  /* "Developed by" visible on Android */
   .dev-label {
-    display: none;
+    display: inline !important;
+    font-size: 0.60rem !important;
+    font-weight: 600 !important;
+    color: #D6C2A7 !important;
+    letter-spacing: 0.1px !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
   }
-  .dev-name {
-    font-size: 0.76rem;
-    white-space: nowrap;
-  }
-  .dev-phone-num {
-    font-size: 0.74rem;
-    white-space: nowrap;
-  }
-  .phone-badge-icon {
-    font-size: 0.72rem;
-  }
-  .dev-pill-left {
-    padding-right: 10px;
-  }
-  .dev-pill-right {
-    padding-left: 10px;
-  }
-  .dev-infinity-connector {
-    width: 20px;
-    height: 20px;
-    margin: 0 -5px;
-  }
-  .infinity-symbol {
-    font-size: 0.96rem;
-  }
-  .taskbar-clock-box {
-    font-size: 0.68rem;
-    padding: 2px 6px;
-    white-space: nowrap;
-  }
-  .taskbar-action-btn {
-    display: none;
-  }
-  .mobile-bottom-actions {
-    bottom: 38px;
-  }
-}
 
-@media (max-width: 440px) {
   .dev-name {
-    font-size: 0.72rem;
+    font-size: 0.70rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.4px !important;
+    white-space: nowrap !important;
   }
-  .dev-phone-num {
-    font-size: 0.72rem;
+
+  .dev-badge-icon {
+    font-size: 0.70rem !important;
   }
+
   .dev-sparkle {
-    display: none;
+    font-size: 0.60rem !important;
+    display: inline-block !important;
   }
+
+  /* Hidden on Android as requested: Only name in middle and time on right */
+  .dev-infinity-connector {
+    display: none !important;
+  }
+
+  .dev-pill-right {
+    display: none !important;
+  }
+
+  .taskbar-action-btn {
+    display: none !important;
+  }
+
+  /* 3. Live Time on the Right Side (Same as Laptop Version) */
+  .taskbar-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    z-index: 1 !important;
+  }
+
   .taskbar-clock-box {
-    font-size: 0.62rem;
-    padding: 2px 4px;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    color: #F5E8D8 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    padding: 2px 6px !important;
+    border-radius: 5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .clock-icon {
+    font-size: 0.66rem !important;
+    opacity: 0.85;
+  }
+
+  /* Quick action buttons sit right above developer taskbar */
+  .mobile-bottom-actions {
+    bottom: 40px !important;
+  }
+
+  body {
+    padding-bottom: calc(70px + 40px) !important;
   }
 }
 
-@media (max-width: 380px) {
-  .taskbar-clock-box {
-    display: none;
+/* Extra Compact Android Devices (< 360px) */
+@media (max-width: 360px) {
+  .dev-pill-left {
+    padding: 2px 6px !important;
+    gap: 3px !important;
   }
-  .taskbar-center {
-    justify-content: center;
-    width: 100%;
+
+  .dev-label {
+    font-size: 0.56rem !important;
+  }
+
+  .dev-name {
+    font-size: 0.66rem !important;
+  }
+
+  .taskbar-clock-box {
+    font-size: 0.60rem !important;
+    padding: 2px 4px !important;
   }
 }
 

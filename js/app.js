@@ -490,10 +490,11 @@ function initTaskbarClock() {
 
   function updateClock() {
     const now = new Date();
+    const isMobile = window.innerWidth <= 768;
     clockEl.textContent = now.toLocaleTimeString('en-US', {
-      hour: '2-digit',
+      hour: 'numeric',
       minute: '2-digit',
-      second: '2-digit',
+      second: isMobile ? undefined : '2-digit',
       hour12: true
     });
   }
