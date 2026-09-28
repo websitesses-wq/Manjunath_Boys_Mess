@@ -1,11 +1,11 @@
-/**
- * Rajeshwari Boys Mess - Interactive Client Application
+﻿/**
+ * Manjunath Boys Mess - Interactive Client Application
  * Features:
  * 1. Live Meal Status Tracker (real-time Open/Closed indicator)
  * 2. Pricing Engine (Default: College Student Offer ₹3,500 / ₹3,000 vs Regular ₹4,500 / ₹4,000)
  * 3. Student ID Verification Photo Preview
  * 4. Mobile Menu Navigation & Touch Optimizations
- * 5. Onboarding Modal & Direct WhatsApp Booking to +91 96115 57696
+ * 5. Onboarding Modal & Direct WhatsApp Booking to +91 91130 74896
  * 6. Meal Pause / Leave Request via WhatsApp
  * 7. FAQ Accordion Toggle
  */
@@ -17,8 +17,8 @@ if (typeof window === 'undefined' || typeof document === 'undefined') {
 } else {
 
 // Target WhatsApp and Contact Phone Number
-const MESS_PHONE = '+91 96115 57696';
-const MESS_WHATSAPP_NUMBER = '919611557696';
+const MESS_PHONE = '+91 91130 74896';
+const MESS_WHATSAPP_NUMBER = '919113074896';
 
 // State: Student Offer active by default
 let isStudentOffer = true;
@@ -326,7 +326,7 @@ function initMouseFlashlightEffect() {
 }
 
 /* ==========================================================================
-   6. ONBOARDING & SUBSCRIPTION MODAL (Direct to WhatsApp +91 96115 57696)
+   6. ONBOARDING & SUBSCRIPTION MODAL (Direct to WhatsApp +91 91130 74896)
    ========================================================================== */
 
 function openJoinModal(planName = 'Full Board') {
@@ -415,7 +415,7 @@ function handleFormSubmit(event) {
     ? (plan === 'Full Board' ? '₹3,500/month (College Student Offer)' : '₹3,000/month (College Student Offer)')
     : (plan === 'Full Board' ? '₹4,500/month (Regular Rate)' : '₹4,000/month (Regular Rate)');
 
-  const message = `Hello Rajeshwari Boys Mess!
+  const message = `Hello Manjunath Boys Mess!
 I would like to join the mess.
 • Name: ${name}
 • Phone: ${phone}
@@ -425,10 +425,10 @@ I would like to join the mess.
 • Monthly Fee: ${rate}
 • Promises Noted: Morning Tea Included & Daily Night Chapati Fix Guaranteed.`;
 
-  // WhatsApp Web API redirect to +91 96115 57696
+  // WhatsApp Web API redirect to +91 91130 74896
   const whatsappUrl = `https://wa.me/${MESS_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   
-  alert(`Booking details prepared for ${name}!\n\nPlan: ${plan} (${rate})\n\nRedirecting to WhatsApp to send your registration to Rajeshwari Boys Mess (+91 96115 57696)...`);
+  alert(`Booking details prepared for ${name}!\n\nPlan: ${plan} (${rate})\n\nRedirecting to WhatsApp to send your registration to Manjunath Boys Mess (+91 91130 74896)...`);
   
   closeJoinModal();
   window.open(whatsappUrl, '_blank');
@@ -439,7 +439,7 @@ I would like to join the mess.
    ========================================================================== */
 
 function sendLeaveNotice() {
-  const studentName = prompt('Enter your full name registered at Rajeshwari Boys Mess:');
+  const studentName = prompt('Enter your full name registered at Manjunath Boys Mess:');
   if (!studentName || !studentName.trim()) return;
 
   const startDate = prompt('From which date are you taking leave? (e.g. Tomorrow / 28 Sept):');
@@ -448,7 +448,7 @@ function sendLeaveNotice() {
   const endDate = prompt('Until which date will you be away? (e.g. 2 Oct):');
   if (!endDate || !endDate.trim()) return;
 
-  const leaveMsg = `Hello Rajeshwari Boys Mess!
+  const leaveMsg = `Hello Manjunath Boys Mess!
 • Student Name: ${studentName.trim()}
 • Leave Notice / Meal Pause Request
 • From: ${startDate.trim()}

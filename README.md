@@ -1,14 +1,14 @@
-# 🍲 Rajeshwari Boys Mess — Davanagere
+﻿# 🍲 MANJUNATH BOYS MESS — Davanagere
 
 > **Authentic Home-Style Dining for College Students & Working Professionals**  
 > Located **Opposite More Super Market**, Davanagere — 577004 (Just 15 mins from BIET Campus).  
-> 📞 **Contact / WhatsApp:** [+91 96115 57696](tel:+919611557696) | 📍 **Google Maps:** [Find Us](https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7)
+> 📞 **Contact / WhatsApp:** [+91 91130 74896](tel:+919113074896) | 📍 **Google Maps:** [Find Us](https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7)
 
 ---
 
 ## 🌟 Overview
 
-**Rajeshwari Boys Mess** is a student-first dining mess designed to deliver nutritious, fresh, and honest homestyle meals every single day. We prioritize real food guarantees over exaggerated claims, ensuring students from **BIET, GMIT, DRM Science, BDT**, and surrounding colleges enjoy healthy, hygienic meals at heavily subsidized monthly rates.
+**MANJUNATH BOYS MESS** is a student-first dining mess designed to deliver nutritious, fresh, and honest homestyle meals every single day. We prioritize real food guarantees over exaggerated claims, ensuring students from **BIET, GMIT, DRM Science, BDT**, and surrounding colleges enjoy healthy, hygienic meals at heavily subsidized monthly rates.
 
 ---
 
@@ -49,10 +49,10 @@ Students directly see subsidized rates by default to avoid confusion:
    - Full responsive layout (fluid on iPhone, Android, tablets, and desktop).
    - Slide-out mobile navigation drawer (`☰`).
    - Fixed sticky bottom quick-action bar with 1-tap **`📞 Call Mess`** and **`💬 WhatsApp`**.
-4. **💰 Student Savings Calculator:** Visual monthly comparison showing ~₹7,500/month outside spending vs ₹3,500/month at Rajeshwari Boys Mess.
+4. **💰 Student Savings Calculator:** Visual monthly comparison showing ~₹7,500/month outside spending vs ₹3,500/month at MANJUNATH BOYS MESS.
 5. **📝 Meal Pause / Leave Notice Request:** 1-tap WhatsApp leave generator for students traveling home for weekends or exam vacations (up to 5 days credit).
 6. **❓ Interactive FAQ Accordion:** Quick answers for late dinner plate reservations, parcel meals, UPI payments, and drinking water facilities.
-7. **💬 One-Tap WhatsApp Onboarding:** Pre-fills subscription tier, dietary preference, and student discount details straight to **+91 96115 57696**.
+7. **💬 One-Tap WhatsApp Onboarding:** Pre-fills subscription tier, dietary preference, and student discount details straight to **+91 91130 74896**.
 
 ---
 
@@ -108,11 +108,11 @@ vercel
 ## 📍 Location & Contact Details
 
 * **Address:** #42, Opposite More Super Market, Davanagere, Karnataka - 577004 (Just 15 mins from BIET Campus)
-* **Phone / Calling:** [+91 96115 57696](tel:+919611557696)
-* **WhatsApp:** [+91 96115 57696](https://wa.me/919611557696)
+* **Phone / Calling:** [+91 91130 74896](tel:+919113074896)
+* **WhatsApp:** [+91 91130 74896](https://wa.me/919113074896)
 * **Google Maps Location:** [https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7](https://maps.app.goo.gl/Fi9g1HoqWj1DgKzi7)
 * **FSSAI License Registration:** 21224010000492
 
 ---
 
-© 2026 **Rajeshwari Boys Mess**. Built with pride for the students of Davanagere.
+© 2026 **MANJUNATH BOYS MESS**. Built with pride for the students of Davanagere.
