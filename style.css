@@ -1803,6 +1803,109 @@ a {
   transform: translateY(-1px);
 }
 
+/* Infinity Connected Capsule Group */
+.dev-infinity-wrapper {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  position: relative;
+  user-select: none;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+}
+
+.dev-pill-left {
+  padding-right: 14px;
+}
+
+.dev-pill-right {
+  padding-left: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.dev-pill-right:hover {
+  border-color: #22C55E;
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.dev-pill-right:active {
+  transform: translateY(0);
+}
+
+.phone-badge-icon {
+  font-size: 0.82rem;
+  color: #4ADE80;
+  filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.7));
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dev-pill-right:hover .phone-badge-icon {
+  transform: rotate(-12deg) scale(1.15);
+}
+
+.dev-phone-num {
+  font-family: var(--font-family-mono);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFE29A 30%, #F5B041 65%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+  white-space: nowrap !important;
+}
+
+/* Infinity Middle Connection Node */
+.dev-infinity-connector {
+  position: relative;
+  z-index: 3;
+  margin: 0 -7px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #4A2612 0%, #1A0D06 90%);
+  border: 1.5px solid rgba(255, 184, 0, 0.75);
+  box-shadow: 0 0 10px rgba(255, 184, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.infinity-symbol {
+  font-family: Arial, sans-serif;
+  font-size: 1.22rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #FFB800;
+  text-shadow: 0 0 6px rgba(255, 184, 0, 0.9);
+  display: inline-block;
+  transform: translateY(-1px);
+  animation: infinityPulse 3s ease-in-out infinite;
+}
+
+@keyframes infinityPulse {
+  0%, 100% {
+    transform: translateY(-1px) scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.15);
+    filter: brightness(1.35) drop-shadow(0 0 4px #FFB800);
+  }
+}
+
+.dev-infinity-wrapper:hover .dev-infinity-connector {
+  transform: scale(1.18) rotate(180deg);
+  border-color: #FFB800;
+  box-shadow: 0 0 18px rgba(255, 184, 0, 0.8);
+}
+
 .dev-badge-icon {
   font-size: 0.85rem;
   color: #FFB800;
@@ -1904,7 +2007,7 @@ a {
 }
 
 /* Responsive adjustments for mobile and small viewports */
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .taskbar-left {
     display: none;
   }
@@ -1914,29 +2017,49 @@ a {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .dev-taskbar {
     height: 38px;
   }
   .dev-taskbar-inner {
-    padding: 0 10px;
-    gap: 8px;
+    padding: 0 8px;
+    gap: 6px;
   }
   .dev-credit-pill {
-    padding: 3px 9px;
-    gap: 5px;
+    padding: 3px 8px;
+    gap: 4px;
     white-space: nowrap !important;
     display: inline-flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
   }
   .dev-label {
-    font-size: 0.65rem;
-    white-space: nowrap;
+    display: none;
   }
   .dev-name {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     white-space: nowrap;
+  }
+  .dev-phone-num {
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+  .phone-badge-icon {
+    font-size: 0.72rem;
+  }
+  .dev-pill-left {
+    padding-right: 10px;
+  }
+  .dev-pill-right {
+    padding-left: 10px;
+  }
+  .dev-infinity-connector {
+    width: 20px;
+    height: 20px;
+    margin: 0 -5px;
+  }
+  .infinity-symbol {
+    font-size: 0.96rem;
   }
   .taskbar-clock-box {
     font-size: 0.68rem;
@@ -1951,16 +2074,29 @@ a {
   }
 }
 
-@media (max-width: 380px) {
-  .dev-label {
+@media (max-width: 440px) {
+  .dev-name {
+    font-size: 0.72rem;
+  }
+  .dev-phone-num {
+    font-size: 0.72rem;
+  }
+  .dev-sparkle {
     display: none;
   }
-  .dev-name {
-    font-size: 0.75rem;
-  }
   .taskbar-clock-box {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     padding: 2px 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .taskbar-clock-box {
+    display: none;
+  }
+  .taskbar-center {
+    justify-content: center;
+    width: 100%;
   }
 }
 

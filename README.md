@@ -118,10 +118,12 @@ vercel
 ## 👨‍💻 Developer & Credits
 
 * **Designed & Developed by:** **V SUSSHANTH**
+* **Developer Contact / Phone:** [+91 96630 89056](tel:+919663089056)
 * **Application:** Manjunath Boys Mess (Davanagere)
-* **Features:** Live meal status tracking, student savings calculator, WhatsApp instant seat reservation, responsive desktop & mobile design, dedicated persistent system taskbar.
+* **Features:** Live meal status tracking, student savings calculator, WhatsApp instant seat reservation, responsive desktop & mobile design, dedicated persistent infinity developer taskbar.
 
 ---
 
-© 2026 **MANJUNATH BOYS MESS**. Built with pride for the students of Davanagere. Developed by **V SUSSHANTH**.
+© 2026 **MANJUNATH BOYS MESS**. Built with pride for the students of Davanagere. Developed by **V SUSSHANTH** (+91 96630 89056).
+
 
